@@ -1,0 +1,2 @@
+Contém as classes de configuração, como a configuração do Spring Boot e
+do banco de dados NoSQL.

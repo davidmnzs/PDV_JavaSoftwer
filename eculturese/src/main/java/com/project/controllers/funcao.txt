@@ -1,0 +1,2 @@
+Tem como função alojar tudo que estará em conexão om o javaFx
+desde interfaces até exposição de dados 
