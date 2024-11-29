@@ -7,6 +7,15 @@ public class Cliente {
     private String contato;
     private String rg;
 
+    //construtor cliente com valores nulos
+
+    public Cliente(){
+        this.name = "";
+        this.cpf = "";
+        this.idade = 0;
+        this.contato = "";
+        this.rg = "";
+    }
     public String getName(){
         return name;
     }
