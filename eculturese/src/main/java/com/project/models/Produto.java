@@ -6,6 +6,12 @@ public class Produto {
     private Double preco;
     private String code;
 
+    //construtor de produto com valores nulos
+    public Produto(String nome, Double preco) {
+        this.nome = "";
+        this.preco = 0.0;
+    }
+
     public String getNome(){
         return nome;
     }
