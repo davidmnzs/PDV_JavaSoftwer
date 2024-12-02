@@ -1,20 +1,35 @@
 package com.project.models;
 import java.util.ArrayList;
-public class Estoque {
-    ArrayList<Object> produtos = new ArrayList<Object>();
 
-    public void recebe(String nome, int quantidade, Double preco){
-        produtos.add(nome);
-        produtos.add(quantidade);
-        produtos.add(preco);
+public class Estoque{
+    private ArrayList<Produto> produtos;
+
+
+    //array list dentro de eestoque para iterar os elementos:
+    
+    // construtor
+    public Estoque(){
+        this.produtos = new ArrayList<>();
+    }
+    // Adiciona prod a lista
+
+    public void adicionarProduto(Produto produto){
+        produtos.add(produto);
+    }
+    //retorna a list de prod
+
+    public ArrayList<Produto> getProdutos(){
+        return produtos;
+    }
+    public void exiberodutos(){
+        for (Produto produto : produtos) {
+            System.out.println(produto.getNome());
+            System.out.println(produto.getPreco());
+            System.out.println(produto.getQuantidade());
+            System.out.println("------------");
+        }
     }
 
-    public void exibe(){
-        for (int i = 0; i < produtos.size(); i++) {
-            System.out.println(produtos.get(i));
-            System.out.println("-------------------------");
-          }
-          
-    }
+
 }
 
