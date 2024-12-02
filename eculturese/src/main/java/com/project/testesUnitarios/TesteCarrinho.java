@@ -14,11 +14,11 @@ public class TesteCarrinho {
         int quantidade = sc.nextInt();
 
         ItemCarrinho item1 = new ItemCarrinho(produto1, quantidade);
-       
-
+        
         Carrinho carrinho = new Carrinho();
         carrinho.adicionarItem(item1);
-        carrinho.escrever();       
+        carrinho.escrever();     
+        
     }
 }
 
