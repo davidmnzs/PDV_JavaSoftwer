@@ -27,6 +27,7 @@ public class TesteUniEstoque {
             count = count + 1;
         }
             estoque.exiberodutos();
+            sc.close();   
 
             
     }

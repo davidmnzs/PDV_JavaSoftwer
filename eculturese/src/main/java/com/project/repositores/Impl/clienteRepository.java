@@ -1,10 +1,10 @@
-package com.project.repositores;
+package com.project.repositores.Impl;
 
 import java.util.List;
 
 import com.project.models.Cliente;
 
-public class clienteRepository {
+public interface clienteRepository {
     public interface InnerclienteRepository {
         void registrar(Cliente cliente);
         Cliente buscarPorNome(String name);

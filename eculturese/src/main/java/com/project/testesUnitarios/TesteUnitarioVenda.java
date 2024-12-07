@@ -37,6 +37,7 @@ public class TesteUnitarioVenda {
             // Verifica se a lista de vendas contém os carrinhos
             System.out.println("Vendas realizadas:");
             venda1.exibeVendas();
+            sc.close();   
     }
             
             // Confirma a venda dos carrinhos

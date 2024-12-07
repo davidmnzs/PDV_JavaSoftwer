@@ -23,7 +23,8 @@ public class TesteCarrinho {
         }
         
 
-        carrinho.escrever();     
+        carrinho.escrever();  
+        sc.close();   
         
     }
 }
