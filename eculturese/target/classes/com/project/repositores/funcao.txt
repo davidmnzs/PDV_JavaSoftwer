@@ -1,3 +1,0 @@
-Contém a camada de acesso aos dados. Neste caso, você usará NoSQL,
-então as classes de repositório serão responsáveis pela
-comunicação com o banco de dados (pode ser MongoDB, por exemplo).

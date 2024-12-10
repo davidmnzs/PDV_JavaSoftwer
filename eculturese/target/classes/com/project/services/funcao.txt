@@ -1,3 +1,0 @@
-Contém a lógica de negócio da aplicação. Aqui ficam as regras de
-processamento, como a gestão de vendas,
-controle de estoque e lógica de exportação de CSV.

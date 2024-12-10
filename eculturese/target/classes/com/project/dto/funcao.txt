@@ -1,2 +1,0 @@
-Se necessário, você pode usar para transferir dados entre as camadas de
-forma eficiente, principalmente entre o controlador e o serviço.

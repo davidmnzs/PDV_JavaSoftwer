@@ -1,2 +1,0 @@
-Contém classes utilitárias, como conversões de objetos,
-validações e helpers.

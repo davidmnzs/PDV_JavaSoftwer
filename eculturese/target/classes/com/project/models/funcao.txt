@@ -1,2 +1,0 @@
-Contém as classes que representam os
-dados da aplicação (como Produto, Venda, Artesao)
