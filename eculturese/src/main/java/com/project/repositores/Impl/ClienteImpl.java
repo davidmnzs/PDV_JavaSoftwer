@@ -19,6 +19,7 @@ public class ClienteImpl implements clienteRepository{
     public void registrar(Cliente cliente) {
 
         doc.append("Nome", cliente.getName())
+                .append("CPF", cliente.getCpf())
         .append("Idade", cliente.getIdade())
         .append("RG", cliente.getRg());
        collection.insertOne(new Document(doc));

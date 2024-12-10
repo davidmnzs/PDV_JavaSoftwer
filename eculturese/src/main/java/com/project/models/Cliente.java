@@ -20,7 +20,16 @@ public class Cliente {
         this.rg = rg;
     }
 
-
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "name='" + name + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", idade=" + idade +
+                ", contato='" + contato + '\'' +
+                ", rg='" + rg + '\'' +
+                '}';
+    }
 
     public String getName(){
         return name;
@@ -35,7 +44,29 @@ public class Cliente {
     }
 
     public void setCpf(String cpf){
-        this.cpf = cpf;
+        int soma = 0;
+        int resto = 0;
+        for (int i = 0; i < 9; i++) {
+            soma = soma +  Character.getNumericValue(cpf.charAt(i))*(10-i);
+        }
+        resto = 11 - (soma  % 11);
+
+        if (resto == Character.getNumericValue(cpf.charAt(9))){
+            // calcular 2 digito
+            soma = 0;
+            for (int i = 0; i < 10; i++) {
+                soma = soma + Character.getNumericValue(cpf.charAt(i))*(11-i);
+            }
+            resto = 11 - (soma % 11);
+
+            if (resto == Character.getNumericValue(cpf.charAt(10))){
+                System.out.println("Cpf válido");
+            }
+
+            this.cpf = cpf;
+        }else {
+            System.out.println("Invalido");
+        }
     }
 
     public int getIdade(){
