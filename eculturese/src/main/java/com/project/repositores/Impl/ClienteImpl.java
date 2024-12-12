@@ -1,9 +1,11 @@
 package com.project.repositores.Impl;
 import com.mongodb.Mongo;
 import com.mongodb.client.*;
+import com.mongodb.client.model.Updates;
 import com.project.models.Cliente;
 
 import org.bson.Document;
+import org.bson.conversions.Bson;
 
 import java.lang.ref.Cleaner;
 import java.util.ArrayList;
@@ -45,6 +47,12 @@ public class ClienteImpl implements clienteRepository{
     }
     @Override
     public void atualizar(Cliente cliente) {
+        //encontrar o doc
+        Document query = new Document().append("Nome", "Raqui2wn");
+        // atualiza o CPF
+        Document Update = new Document("$set", new Document("CPF", cliente.getCpf()));
+
+        collection.updateOne(query, Update);
 
     }
     @Override
