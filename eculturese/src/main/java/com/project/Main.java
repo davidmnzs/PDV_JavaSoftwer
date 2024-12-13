@@ -20,7 +20,7 @@ public class Main {
                     cliente2554.setCpf("11144477735");
                     cliente2554.setIdade(15);
                     cliente2554.setRG("124229075");
-                    //ClienteRepository.registrar(cliente2554);
+                    ClienteRepository.registrar(cliente2554);
                     List<Cliente> todos = ClienteRepository.buscarTodos();
 
                     /*for (Cliente cliente : todos){
@@ -30,10 +30,10 @@ public class Main {
                         System.out.println("RG: " + cliente.getRg());
                         System.out.println("--------------------");
 
-                    }*/
+                    }
 
                     //ClienteRepository.atualizar(cliente2554);
-                    ClienteRepository.excluir(cliente2554);
+                    ClienteRepository.excluir(cliente2554);*/
 
 
 

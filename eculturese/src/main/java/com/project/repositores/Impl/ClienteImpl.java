@@ -1,6 +1,8 @@
 package com.project.repositores.Impl;
 import com.mongodb.Mongo;
 import com.mongodb.client.*;
+import com.mongodb.client.model.IndexOptions;
+import com.mongodb.client.model.Indexes;
 import com.mongodb.client.model.Updates;
 import com.project.models.Cliente;
 
@@ -22,14 +24,24 @@ public class ClienteImpl implements clienteRepository{
     }
     @Override
     public void registrar(Cliente cliente) {
-
+    try {
         doc.append("Nome", cliente.getName())
                 .append("CPF", cliente.getCpf())
-        .append("Idade", cliente.getIdade())
-        .append("RG", cliente.getRg());
-       collection.insertOne(new Document(doc));
-
+                .append("Idade", cliente.getIdade())
+                .append("RG", cliente.getRg());
+        collection.insertOne(new Document(doc));
         System.out.println("Cliente registrado com sucesso!");
+    }catch (Exception e){
+        //Negando a duplicação de CPF
+        IndexOptions IndexOptions = new IndexOptions().unique(true);
+        collection.createIndex(Indexes.ascending("CPF"), IndexOptions);
+        System.out.println("não foi possivel registrar, cliente já existente");
+
+    }
+
+
+
+
     }
 
     // metodo para fazer busca pelo nome: 
