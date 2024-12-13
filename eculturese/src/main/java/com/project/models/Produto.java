@@ -13,6 +13,14 @@ public class Produto {
         this.preco = 0.0;
     }
 
+    public Produto(String nome, String categoria, Double preco, int quantidade, String code) {
+        this.nome = nome;
+        this.categoria = categoria;
+        this.preco = preco;
+        this.quantidade = quantidade;
+        this.code = code;
+    }
+
     public String getNome(){
         return nome;
     }

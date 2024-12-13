@@ -63,7 +63,8 @@ public class ClienteImpl implements clienteRepository{
     @Override
     public void atualizar(Cliente cliente) {
         //encontrar o doc
-        Document query = new Document().append("Nome", "Raqui2wn");
+        //Modificar posteriormente para receber dado externo
+        Document query = new Document().append("Nome", cliente.getName());
         // atualiza o CPF
         Document Update = new Document("$set", new Document("CPF", cliente.getCpf()));
 
@@ -72,7 +73,7 @@ public class ClienteImpl implements clienteRepository{
     }
     @Override
     public void excluir(Cliente cliente) {
-        Bson query = eq("Nome", "Raqui2wn");
+        Bson query = eq("Nome", cliente.getName());
         try{
             collection.deleteOne(query);
         }catch(Exception e){
