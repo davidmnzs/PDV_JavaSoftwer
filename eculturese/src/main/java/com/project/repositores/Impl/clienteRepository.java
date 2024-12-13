@@ -9,6 +9,6 @@ public interface clienteRepository {
         Cliente buscarPorNome(String name);
         List<Cliente> buscarTodos();
         void atualizar(Cliente cliente);
-        void excluir (String name);
+        void excluir (Cliente cliente);
     
 }

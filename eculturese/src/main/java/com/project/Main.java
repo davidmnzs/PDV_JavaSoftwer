@@ -32,7 +32,8 @@ public class Main {
 
                     }*/
 
-                    ClienteRepository.atualizar(cliente2554);
+                    //ClienteRepository.atualizar(cliente2554);
+                    ClienteRepository.excluir(cliente2554);
 
 
 

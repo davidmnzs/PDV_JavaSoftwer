@@ -10,6 +10,9 @@ import org.bson.conversions.Bson;
 import java.lang.ref.Cleaner;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.mongodb.client.model.Filters.eq;
+
 public class ClienteImpl implements clienteRepository{
     private final MongoCollection<Document> collection;
     Document doc = new Document();
@@ -56,7 +59,13 @@ public class ClienteImpl implements clienteRepository{
 
     }
     @Override
-    public void excluir(String name) {
-        collection.deleteOne(new Document("Nome", name));
+    public void excluir(Cliente cliente) {
+        Bson query = eq("Nome", "Raqui2wn");
+        try{
+            collection.deleteOne(query);
+        }catch(Exception e){
+            System.err.println("Erro ao excluir cliente: " + e.getMessage());
+        }
+
     }
 }
