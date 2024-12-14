@@ -21,6 +21,29 @@ public class Produto {
         this.code = code;
     }
 
+    public Produto(String nome, String categoria, Double preco, int quantidade) {
+        this.nome = nome;
+        this.categoria = categoria;
+        this.preco = preco;
+        this.quantidade = quantidade;
+    }
+
+    @Override
+    public String toString() {
+        return "Nome: " + nome + "\n" +
+                "Categoria " + categoria+ "\n" +
+                "Preço " + preco+ "\n" +
+                "Quantidade " + quantidade+ "\n"+
+                "Code: " + code;
+
+    }
+    public void imprimir() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Categoria: " + categoria);
+        System.out.println("Preço: R$" + preco);
+        System.out.println("Quantidade: " + quantidade);
+    }
+
     public String getNome(){
         return nome;
     }

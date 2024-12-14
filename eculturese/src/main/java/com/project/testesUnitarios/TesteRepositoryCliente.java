@@ -23,17 +23,7 @@ public class TesteRepositoryCliente {
             ClienteRepository.registrar(cliente2554);
             List<Cliente> todos = ClienteRepository.buscarTodos();
 
-                    /*for (Cliente cliente : todos){
-                        System.out.println("CPF: " + cliente.getCpf());
-                        System.out.println("Nome: " + cliente.getName());
-                        System.out.println("Idade: " + cliente.getIdade());
-                        System.out.println("RG: " + cliente.getRg());
-                        System.out.println("--------------------");
-
-                    }
-
-                    //ClienteRepository.atualizar(cliente2554);
-                    ClienteRepository.excluir(cliente2554);*/
+            ClienteRepository.buscarPorNome(cliente2554.getName());
 
 
 

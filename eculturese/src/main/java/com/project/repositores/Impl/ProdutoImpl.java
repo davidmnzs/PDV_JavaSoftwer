@@ -17,7 +17,7 @@ public class ProdutoImpl implements produtoRepository {
         this.collection = database.getCollection("Produtos");
     }
     @Override
-    public void CadProduto(Produto produto){
+    public void registrar(Produto produto){
         doc.append("Nome", produto.getNome());
         doc.append("Preco", produto.getPreco());
         doc.append("Categoria", produto.getCategoria());
@@ -29,14 +29,20 @@ public class ProdutoImpl implements produtoRepository {
     @Override
     public Produto MostrarProduto(String nome){
        Document doc = collection.find(new Document("Nome", nome)).first();
-       if (doc != null) return null;
-       return new Produto(doc.getString("Nome"), doc.getString("Quantidade"), doc.getDouble("Preco"), doc.getInteger("Quantidade"), doc.getString("Categoria"));
+           if (doc == null) return null;
+        return new Produto(
+                doc.getString("Nome"),
+                doc.getString("Categoria"),
+                doc.getDouble("Preco"),
+                doc.getInteger("Quantidade")
+
+        );
     }
     @Override
     public List<Produto> BuscarTodos(){
         List<Produto> produto = new ArrayList<>();
         for(Document doc : collection.find()){
-            produto.add(new Produto(doc.getString("Nome"), doc.getString("Quantidade"), doc.getDouble("Preco"), doc.getInteger("Quantidade"), doc.getString("Categoria")));
+            produto.add(new Produto(doc.getString("Nome"), doc.getString("Categoria"), doc.getDouble("Preco"), doc.getInteger("Quantidade")));
         }
         return produto;
     }
