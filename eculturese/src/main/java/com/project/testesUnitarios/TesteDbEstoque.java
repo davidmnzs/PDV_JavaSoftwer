@@ -11,9 +11,16 @@ public class TesteDbEstoque {
         MongoDatabase database = mongoClient.getDatabase("teste");
         ProdutoImpl produtoRepository = new ProdutoImpl(database);
 
-        Produto produto = new Produto("telefone","Eletronicos", 1452.0,90, "4323232");
+        Produto produto = new Produto("telefone","Eletronicos", 142.0,99, "4323232");
         //produtoRepository.registrar(produto);
-        String mostra = produtoRepository.BuscarTodos().toString();
-        System.out.println(mostra);
+
+        //Mostra todos
+        //String mostra = produtoRepository.BuscarTodos().toString();
+        //System.out.println(mostra);
+
+        //Atualiza quant do produto
+        //produtoRepository.atualizarProduto(produto);
+
+        produtoRepository.excluirProduto(produto);
     }
 }
