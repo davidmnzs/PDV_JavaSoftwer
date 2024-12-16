@@ -11,13 +11,9 @@ public class TesteDbEstoque {
         MongoDatabase database = mongoClient.getDatabase("teste");
         ProdutoImpl produtoRepository = new ProdutoImpl(database);
 
-        Produto produto = new Produto("Notebook","Eletronicos", 1231.0,12, "432432");
-        //produtoRepository.MostrarProduto("Notebook");
-        Produto produto1 = produtoRepository.MostrarProduto("Notebook");
-        if (produto1 != null) {
-            System.out.println("Produto encontrado:\n " + produto1);
-        } else {
-            System.out.println("Produto não encontrado.");
-        }
+        Produto produto = new Produto("telefone","Eletronicos", 1452.0,90, "4323232");
+        //produtoRepository.registrar(produto);
+        String mostra = produtoRepository.BuscarTodos().toString();
+        System.out.println(mostra);
     }
 }

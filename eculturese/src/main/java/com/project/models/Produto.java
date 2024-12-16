@@ -34,7 +34,8 @@ public class Produto {
                 "Categoria " + categoria+ "\n" +
                 "Preço " + preco+ "\n" +
                 "Quantidade " + quantidade+ "\n"+
-                "Code: " + code;
+                "Code: " + code + "\n" +
+                "---------" + "\n";
 
     }
     public void imprimir() {
