@@ -1,7 +1,10 @@
 package com.project.testesUnitarios;
 import java.util.Scanner;
 
+import com.project.models.Carrinho;
+import com.project.models.ItemCarrinho;
 import com.project.models.Produto;
+import com.project.models.venda;
 
 public class TesteUnitarioVenda {
 

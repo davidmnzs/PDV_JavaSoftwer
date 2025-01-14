@@ -12,7 +12,7 @@ public class TesteDbEstoque {
         ProdutoImpl produtoRepository = new ProdutoImpl(database);
 
         Produto produto = new Produto("telefone","Eletronicos", 142.0,99, "4323232");
-        produtoRepository.registrar(produto);
+        //produtoRepository.registrar(produto);
 
         //Mostra todos
         //String mostra = produtoRepository.BuscarTodos().toString();
@@ -21,6 +21,6 @@ public class TesteDbEstoque {
         //Atualiza quant do produto
         //produtoRepository.atualizarProduto(produto);
 
-        // produtoRepository.excluirProduto(produto);
+        produtoRepository.excluirProduto(produto);
     }
 }
