@@ -9,8 +9,8 @@ public class Produto {
 
     //construtor de produto com valores nulos
     public Produto(String nome, Double preco) {
-        this.nome = "";
-        this.preco = 0.0;
+        this.nome = nome;
+        this.preco = preco;
     }
 
     public Produto(String nome, String categoria, Double preco, int quantidade, String code) {
@@ -68,11 +68,5 @@ public class Produto {
     }
     public void setQuantidade(int quantidade){
         this.quantidade = quantidade;
-    }
-    public String getCode(){
-        return code;
-    }
-    public void setCode(String code){
-        this.code = code;
     }
 }

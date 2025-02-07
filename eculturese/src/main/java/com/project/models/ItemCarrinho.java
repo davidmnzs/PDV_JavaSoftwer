@@ -8,6 +8,11 @@ public class ItemCarrinho {
         this.produto = produto;
         this.quantidade = quantidade;
     }
+
+    public ItemCarrinho() {
+
+    }
+
     public Produto getProduto(){
         return produto;
     }

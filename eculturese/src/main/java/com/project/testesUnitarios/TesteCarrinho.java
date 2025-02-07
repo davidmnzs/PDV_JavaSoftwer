@@ -9,21 +9,31 @@ public class TesteCarrinho {
         Carrinho carrinho = new Carrinho();
         Scanner sc = new Scanner(System.in);
         int count = 0;
-        while (count != 2 ) {
-        System.out.println("Digite o nome do produto: ");
-        produto1.setNome(sc.next());
-        System.out.println("A quantidade: ");
-        int quantidade = sc.nextInt();
+        boolean flag = true;
+        while (flag) {
+            System.out.println("Digite o nome do produto: ");
+            produto1.setNome(sc.next());
+            System.out.println("A quantidade: ");
+            int quantidade = sc.nextInt();
 
-        ItemCarrinho item1 = new ItemCarrinho(produto1, quantidade);
-        
-        
-        carrinho.adicionarItem(item1);
-        count = count +1;
+            ItemCarrinho item1 = new ItemCarrinho(produto1, quantidade);
+
+
+            carrinho.adicionarItem(item1);
+            count = count +1;
+
+            System.out.println("Finalizar ? [Y/N]: ");
+            char ch = sc.next().charAt(0);
+            if (ch == 'Y') {
+                flag = false;
+            }else{
+                flag = true;
+            }
         }
         
 
-        carrinho.escrever();  
+        carrinho.finalizar(carrinho);
+        //carrinho.escrever();
         sc.close();   
         
     }

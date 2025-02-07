@@ -3,11 +3,14 @@ package com.project.models;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Carrinho {
+public class Carrinho{
     private String Cliente;
     private List<ItemCarrinho> itens;
 
+
+
     public Carrinho(){
+        super();
         this.itens = new ArrayList<>();
     }
 
@@ -34,7 +37,9 @@ public class Carrinho {
     public void escrever(){
         if(getItens().isEmpty()){
             System.out.println("Não há produtos no carrinho ");
+            return;
         }
+
         
         System.out.println("Produtos no carrinho: ");
         for(ItemCarrinho item : getItens()){
@@ -45,9 +50,17 @@ public class Carrinho {
             System.out.println("Subtotal: " + item.calcularSubTotal());
             System.out.println("----------------------");
         }
+
     }
 
     public double calcularTotal(){
         return itens.stream().mapToDouble(ItemCarrinho::calcularSubTotal).sum();
+    }
+
+    public void finalizar(Carrinho carrinho){
+        Venda venda = new Venda(carrinho);
+        venda.vendaFinalizada();
+
+
     }
 }
