@@ -1,5 +1,9 @@
 package com.project.models;
 
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoDatabase;
+import com.project.repositores.Impl.VendaImpl;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -58,9 +62,12 @@ public class Carrinho{
     }
 
     public void finalizar(Carrinho carrinho){
+        MongoClient mongoClient = new MongoClient("localhost", 27017);
+        MongoDatabase database = mongoClient.getDatabase("teste");
         Venda venda = new Venda(carrinho);
-        venda.vendaFinalizada();
+        VendaImpl vendaRepository = new VendaImpl(database);
 
+        vendaRepository.salvar(venda);
 
     }
 }

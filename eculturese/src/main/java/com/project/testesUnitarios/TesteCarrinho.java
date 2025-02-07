@@ -1,7 +1,10 @@
 package com.project.testesUnitarios;
 import java.util.Scanner;
 
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoDatabase;
 import com.project.models.*;
+import com.project.repositores.Impl.VendaImpl;
 
 public class TesteCarrinho {
     public static void main(String[] args) {
@@ -30,10 +33,16 @@ public class TesteCarrinho {
                 flag = true;
             }
         }
-        
 
-        carrinho.finalizar(carrinho);
-        //carrinho.escrever();
+        MongoClient mongoClient = new MongoClient("localhost", 27017);
+        MongoDatabase database = mongoClient.getDatabase("teste");
+
+
+        Venda venda = new Venda(carrinho);
+
+
+        VendaImpl vendaRepository = new VendaImpl(database);
+        vendaRepository.salvar(venda);
         sc.close();   
         
     }

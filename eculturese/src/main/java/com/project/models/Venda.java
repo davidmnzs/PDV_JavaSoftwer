@@ -1,14 +1,17 @@
 package com.project.models;
 
+import com.project.repositores.Impl.VendaImpl;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Venda {
     private List<ItemCarrinho> itens;
+    VendaImpl vendadb;
     public Venda(Carrinho carrinho) {
         this.itens = new ArrayList<>(carrinho.getItens());
     }
-    public void vendaFinalizada(){
+    public List<ItemCarrinho> vendaFinalizada(){
             if(itens.isEmpty()){
                 System.out.println("Não há produtos no carrinho ");
             }
@@ -21,7 +24,9 @@ public class Venda {
                 System.out.println("Preço unitario: " + produto.getPreco());
                 System.out.println("Subtotal: " + item.calcularSubTotal());
                 System.out.println("----------------------");
+
             }
+        return itens;
     }
 
 }

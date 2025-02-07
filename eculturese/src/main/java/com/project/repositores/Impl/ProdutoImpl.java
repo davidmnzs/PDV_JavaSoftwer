@@ -13,7 +13,7 @@ public class ProdutoImpl implements produtoRepository {
     private final MongoCollection<Document> collection;
     Document doc = new Document();
 
-    public ProdutoImpl(MongoDatabase database) {
+    public ProdutoImpl(MongoDatabase database)   {
         this.collection = database.getCollection("Produtos");
     }
     @Override
