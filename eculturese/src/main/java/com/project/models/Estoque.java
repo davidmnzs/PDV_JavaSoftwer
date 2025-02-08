@@ -3,10 +3,7 @@ import java.util.ArrayList;
 
 public class Estoque{
     private ArrayList<Produto> produtos;
-
-
     //array list dentro de eestoque para iterar os elementos:
-    
     // construtor
     public Estoque(){
         this.produtos = new ArrayList<>();
