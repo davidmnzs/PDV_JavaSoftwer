@@ -61,13 +61,5 @@ public class Carrinho{
         return itens.stream().mapToDouble(ItemCarrinho::calcularSubTotal).sum();
     }
 
-    public void finalizar(Carrinho carrinho){
-        MongoClient mongoClient = new MongoClient("localhost", 27017);
-        MongoDatabase database = mongoClient.getDatabase("teste");
-        Venda venda = new Venda(carrinho);
-        VendaImpl vendaRepository = new VendaImpl(database);
 
-        vendaRepository.salvar(venda);
-
-    }
 }

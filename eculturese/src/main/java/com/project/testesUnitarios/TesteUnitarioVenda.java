@@ -17,7 +17,7 @@ public class TesteUnitarioVenda {
              Produto produto1 = new Produto("",0.0);
              Scanner sc = new Scanner(System.in);
              int count = 0;
-            // Criando alguns objetos Carrinho fictícios para testar
+
             while (count != 2 ) {
                 System.out.println("Digite o nome do produto: ");
                 produto1.setNome(sc.next());
@@ -32,17 +32,11 @@ public class TesteUnitarioVenda {
                 }
             carrinho.escrever();
             venda1.vendaFinalizada();
-            VendaImpl vendaRepos = new VendaImpl();
-
-            // Verifica se a lista de vendas contém os carrinhos
             System.out.println("Vendas realizadas:");
-           //venda1();
-           sc.close();
+             sc.close();
     }
 
-           // Confirma a venda dos carrinhos
-
-        }
+}
 
 
 

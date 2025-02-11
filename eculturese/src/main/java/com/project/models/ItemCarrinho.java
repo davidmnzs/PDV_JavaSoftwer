@@ -25,13 +25,17 @@ public class ItemCarrinho {
     public void setQuantidade(int quantidade){
         this.quantidade = quantidade;
     }
-    public String toString(){
-        return "Produto: " + produto.getNome()+
-                "Quntidade: " + quantidade +
-                " preco: "  + produto.getPreco()+ 
-                " SubTotal: " + calcularSubTotal();
-    }
     public double calcularSubTotal(){
         return produto.getPreco() * quantidade;
     }
+
+    public String toString(){
+        return "Produto: " + produto.getNome()+
+                "Quntidade: " + quantidade +
+                " preco: "  + produto.getPreco()+
+                " SubTotal: " + calcularSubTotal();
+
+    }
+
+
 }

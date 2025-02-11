@@ -1,10 +1,7 @@
 package com.project.testesUnitarios;
 import java.util.Scanner;
-
-import com.mongodb.MongoClient;
-import com.mongodb.client.MongoDatabase;
 import com.project.models.*;
-import com.project.repositores.Impl.VendaImpl;
+import com.project.services.ServiceVenda;
 
 public class TesteCarrinho {
     public static void main(String[] args) {
@@ -33,11 +30,10 @@ public class TesteCarrinho {
                 flag = true;
             }
         }
-     Venda venda = new Venda(carrinho);
-
-    carrinho.finalizar(carrinho);
-
-        sc.close();   
+            Venda venda = new Venda(carrinho);
+            ServiceVenda serviceVenda = new ServiceVenda();
+            serviceVenda.finalizar(carrinho);
+            sc.close();
         
     }
 }
