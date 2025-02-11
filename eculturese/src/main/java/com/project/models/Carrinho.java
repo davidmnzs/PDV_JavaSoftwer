@@ -51,7 +51,7 @@ public class Carrinho{
             System.out.println("Produto: " + produto.getNome());
             System.out.println("Quantidade: " + item.getQuantidade());
             System.out.println("Preço unitario: " + produto.getPreco());
-            System.out.println("Subtotal: " + item.calcularSubTotal());
+            System.out.println("Subtotal: " + produto.getPreco()*item.getQuantidade());
             System.out.println("----------------------");
         }
 

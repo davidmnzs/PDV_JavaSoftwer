@@ -3,14 +3,17 @@ package com.project.models;
 public class ItemCarrinho {
     private Produto produto;
     private int quantidade;
+    private double preco;
 
     public ItemCarrinho(Produto produto, int quantidade){
         this.produto = produto;
         this.quantidade = quantidade;
     }
 
-    public ItemCarrinho() {
-
+    public ItemCarrinho(Produto produto, int quantidade, double preco) {
+        this.produto = produto;
+        this.quantidade = quantidade;
+        this.preco = preco;
     }
 
     public Produto getProduto(){

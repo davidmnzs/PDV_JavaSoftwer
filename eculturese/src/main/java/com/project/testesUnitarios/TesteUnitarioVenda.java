@@ -23,8 +23,10 @@ public class TesteUnitarioVenda {
                 produto1.setNome(sc.next());
                 System.out.println("A quantidade: ");
                 int quantidade = sc.nextInt();
+                System.out.println("O valor : ");
+                float preco = sc.nextFloat();
 
-               ItemCarrinho item1 = new ItemCarrinho(produto1, quantidade);
+               ItemCarrinho item1 = new ItemCarrinho(produto1, quantidade, preco);
 
 
                carrinho.adicionarItem(item1);
