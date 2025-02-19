@@ -1,6 +1,5 @@
-# Nome do Projeto
+# PDV em Java
 
-Breve descrição do projeto, destacando seu objetivo e principais funcionalidades.
 
 ## Tecnologias Utilizadas
 
