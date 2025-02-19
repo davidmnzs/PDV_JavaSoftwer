@@ -1,93 +1,78 @@
-Projeto Nome do Projeto
+# Nome do Projeto
 
 Breve descrição do projeto, destacando seu objetivo e principais funcionalidades.
 
-Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
-Java 23
-Maven para gerenciamento de dependências
+- Java 23  
+- Maven para gerenciamento de dependências  
+- MongoDB como banco de dados NoSQL  
+- Outros frameworks e bibliotecas utilizadas (Spring Boot, Lombok, etc.)
 
-MongoDB como banco de dados NoSQL
+## Instalação e Configuração
 
-Outros frameworks e bibliotecas utilizadas (Spring Boot, Lombok, etc.)
-
-Instalação e Configuração
-
-Requisitos
+### Requisitos
 
 Antes de iniciar, certifique-se de ter instalado:
 
-Java JDK 17+
+- Java JDK 17+
+- Apache Maven
+- MongoDB
 
-Apache Maven
+### Passos para Execução
 
-MongoDB
-
-Passos para Execução
-
-Clone o repositório:
-
+```sh
 git clone https://github.com/davidmnzs/PDV_JavaSoftwer
 cd PDV_JavaSoftwer
+```
 
-Configure o banco de dados MongoDB:
+#### Configure o banco de dados MongoDB:
 
-Certifique-se de que o MongoDB está rodando na porta padrão (27017) ou ajuste no application.properties/application.yml
+- Certifique-se de que o MongoDB está rodando na porta padrão (27017) ou ajuste no `application.properties`/`application.yml`
+- Se necessário, crie um banco de dados e coleções adequadas
 
-Se necessário, crie um banco de dados e coleções adequadas
-
-Instale as dependências e compile o projeto:
-
+```sh
 mvn clean install
+```
 
-Execute o projeto:
-
+```sh
 mvn spring-boot:run
+```
 
-Configuração do MongoDB
+## Configuração do MongoDB
 
-Caso seja necessário configurar credenciais ou conexão personalizada, ajuste o arquivo application.properties:
+Caso seja necessário configurar credenciais ou conexão personalizada, ajuste o arquivo `application.properties`:
 
+```properties
 spring.data.mongodb.uri=mongodb://usuario:senha@localhost:27017/nome-do-banco
+```
 
-Ou, se estiver usando application.yml:
+Ou, se estiver usando `application.yml`:
 
+```yaml
 spring:
   data:
     mongodb:
       uri: mongodb://usuario:senha@localhost:27017/nome-do-banco
+```
 
-Estrutura do Projeto
+## Contribuição
 
-seu-projeto/
-├── src/
-│   ├── main/
-│   │   ├── java/com/seuusuario/projeto/
-│   │   │   ├── controller/
-│   │   │   ├── service/
-│   │   │   ├── repository/
-│   │   │   ├── model/
-│   │   ├── resources/
-│   │   │   ├── application.properties
-│   ├── test/
-├── pom.xml
-├── README.md
+1. Fork o repositório
+2. Crie uma branch:
+   ```sh
+   git checkout -b feature-minha-feature
+   ```
+3. Commit suas alterações:
+   ```sh
+   git commit -m 'Adicionando nova funcionalidade'
+   ```
+4. Envie para o repositório:
+   ```sh
+   git push origin feature-minha-feature
+   ```
+5. Abra um Pull Request
 
+## Licença
 
-
-#Contribuição
-
-Fork o repositório
-
-Crie uma branch (git checkout -b feature-minha-feature)
-
-Commit suas alterações (git commit -m 'Adicionando nova funcionalidade')
-
-Envie para o repositório (git push origin feature-minha-feature)
-
-Abra um Pull Request
-
-Licença
-
-Este projeto está licenciado sob a MIT License.
-
+Este projeto está licenciado sob a **MIT License**.
