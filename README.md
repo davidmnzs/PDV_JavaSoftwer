@@ -7,7 +7,6 @@ Breve descrição do projeto, destacando seu objetivo e principais funcionalidad
 - Java 23  
 - Maven para gerenciamento de dependências  
 - MongoDB como banco de dados NoSQL  
-- Outros frameworks e bibliotecas utilizadas (Spring Boot, Lombok, etc.)
 
 ## Instalação e Configuração
 
@@ -53,7 +52,7 @@ Ou, se estiver usando `application.yml`:
 spring:
   data:
     mongodb:
-      uri: mongodb://usuario:senha@localhost:27017/nome-do-banco
+      uri: mongodb://usuario:senha@localhost:27017/PDV
 ```
 
 ## Contribuição
