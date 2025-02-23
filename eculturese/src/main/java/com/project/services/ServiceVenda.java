@@ -13,6 +13,7 @@ public class ServiceVenda {
     Venda venda = new Venda(carrinho);
 
     public void finalizar(Carrinho carrinho){
+
         MongoClient mongoClient = new MongoClient("localhost", 27017);
         MongoDatabase database = mongoClient.getDatabase("teste");
         Venda venda = new Venda(carrinho);
@@ -21,9 +22,4 @@ public class ServiceVenda {
         vendaRepository.salvar(venda);
 
     }
-
-
-
-
-
 }

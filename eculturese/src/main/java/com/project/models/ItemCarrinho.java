@@ -37,8 +37,5 @@ public class ItemCarrinho {
                 "Quntidade: " + quantidade +
                 " preco: "  + produto.getPreco()+
                 " SubTotal: " + calcularSubTotal();
-
     }
-
-
 }
